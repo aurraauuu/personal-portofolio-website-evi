@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Navbar</title>
+  <style>
+
+html {
+  scroll-behavior: smooth;
+}
+
+    body {
+      margin: 0;
+      background-color: #fdf8f2; /* warna latar seperti gambar */
+      font-family: Arial, sans-serif;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: flex-end;
+      padding: 20px 50px;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 40px;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #444; /* warna teks abu-abu gelap */
+      font-size: 18px;
+    }
+
+
+  body {
+    background: #fdf8f2;
+    font-family: sans-serif;
+    margin: 0;
+    padding: 40px;
+  }
+
+  .home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    flex-wrap: wrap;
+  }
+
+  .profile {
+    position: relative;
+    background-color: #e38b5a;
+    border-radius: 50% / 30%;
+    width: 300px;
+    height: 420px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .profile img {
+    position: relative;
+    width: 200px;
+    z-index: 2;
+  }
+
+  .halo {
+    position: absolute;
+    top: 40px;
+    width: 180px;
+    height: 90px;
+    border: 6px solid #3f2e1e;
+    border-radius: 50%;
+    z-index: 1;
+  }
+
+  .star {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: yellow;
+    clip-path: polygon(50% 0%, 60% 40%, 100% 50%, 60% 60%, 50% 100%, 40% 60%, 0% 50%, 40% 40%);
+    opacity: 0.8;
+  }
+
+  .star.left {
+    left: 10px;
+    top: 100px;
+  }
+
+  .star.right {
+    right: 10px;
+    bottom: 80px;
+  }
+
+  .text {
+    max-width: 500px;
+  }
+
+  .text h1 {
+    font-size: 50px;
+    margin: 0;
+    color: #3f3f3f;
+  }
+
+  .text h2 {
+    font-size: 45px;
+    color: #3f2e1e;
+    margin: 10px 0;
+  }
+
+  .text p {
+    font-size: 16px;
+    color: #4d4d4d;
+    margin-bottom: 30px;
+  }
+
+  .button {
+    display: inline-flex;
+    align-items: center;
+    background: #3f3f3f;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  .button span {
+    margin-left: 10px;
+    font-size: 18px;
+  }
+
+  
+  .about-section {
+  background-color: #f7cbb3;
+  min-height: 100vh; /* Menyesuaikan tinggi layar */
+  width: 100vw;       /* Menyesuaikan lebar layar */
+  padding: 60px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Georgia', serif;
+  color: #3d2d1b;
+  gap: 40px;
+  box-sizing: border-box;
+   }
+
+  .about-text {
+    max-width: 600px;
+  }
+
+  .about-text h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+  }
+
+  .about-text p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+  }
+
+  .about-text h3 {
+    font-size: 28px;
+    margin: 20px 0 10px;
+  }
+
+  .cv-btn {
+    background-color: #3d2d1b;
+    color: #fff;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+
+  .cv-btn:hover {
+    background-color: #2a1e13;
+  }
+
+  .about-image img {
+    width: 280px;
+    height: auto;
+    border-radius: 50%;
+    border: 6px solid #f7cbb3;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  @media (max-width: 768px) {
+    .about-section {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .about-image {
+      margin-top: 30px;
+    }
+  }
+
+  
+  body {
+  margin: 5;
+  font-family: 'Georgia', serif;
+  background-color: #fdf6f2;
+}
+
+.projects-section {
+  padding: 50px 0;
+  text-align: center;
+}
+
+.projects-section h2 {
+  font-size: 40px;
+  margin-bottom: 30px;
+}
+
+.projects-section h2 span {
+  display: block;
+  font-size: 20px;
+  color: #666;
+  letter-spacing: 1px;
+}
+
+.slider-wrapper {
+  position: relative;
+  max-width: 1200px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.project-gallery {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 10px 0;
+}
+
+.project-gallery a {
+  flex-shrink: 0;
+}
+
+.project-gallery img {
+  height: 400px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.nav-btn {
+  position: absolute;
+  top: 45%;
+  transform: translateY(-50%);
+  font-size: 30px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 2;
+  color: #333;
+}
+
+#prevBtn {
+  left: 0;
+}
+
+#nextBtn {
+  right: 0;
+}
+
+
+style>
+    body {
+      background-color: #f4c2b5;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+
+    .container {
+      background-color: #f4c2b5;
+      color: #333;
+      max-width: 1300px;
+      margin: 10px auto;
+      padding: 100px;
+      border-radius: 1px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      animation: fadeInUp 1s ease-in-out;
+      position: relative;
+      z-index: 2;
+    }
+
+    h1 {
+      font-size: 32px;
+      margin-bottom: 20px;
+      font-weight: bold;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 1.6;
+      margin-bottom: 30px;
+    }
+
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      font-size: 18px;
+      transition: transform 0.3s;
+    }
+
+    .contact-item i {
+      margin-right: 12px;
+      color: #333;
+      font-size: 20px;
+    }
+
+    .contact-item:hover {
+      transform: scale(1.05);
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Falling leaf styles */
+    .leaf {
+      position: fixed;
+      top: -50px;
+      font-size: 24px;
+      color: #964B00;
+      animation: fall linear infinite;
+      z-index: 1;
+    }
+
+    @keyframes fall {
+      to {
+        transform: translateY(110vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+
+     @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(30px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes appear {
+        to { opacity: 1; transform: translateY(0); }
+    } 
+
+
+
+ @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Falling leaf styles */
+    .leaf {
+      position: absolute;
+      top: -50px;
+      font-size: 24px;
+      color: #964B00;
+      animation: fall linear infinite;
+      z-index: 1;
+    }
+
+    @keyframes fall {
+      to {
+        transform: translateY(110vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+
+
+
+
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  background-color: #f3f1e7;
+  padding: 60px 20px;
+  color: #2e2e2e;
+  flex-wrap: wrap;
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 200px;
+  padding: 10px;
+}
+
+.footer-column h2 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #222;
+}
+
+.footer-column p {
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.vertical-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.vertical-nav li {
+  margin-bottom: 10px;
+}
+
+.vertical-nav a {
+  text-decoration: none;
+  color: #2e2e2e;
+  font-weight: bold;
+}
+
+.vertical-nav a:hover {
+  text-decoration: underline;
+}
+
+    
+  </style>
+
+
+  </style>
+</head>
+ 
+<!--Navigasi-->
+  <nav class="navbar">
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+  <div class="home">
+  <div class="profile">
+    <div class="halo"></div>
+    <div class="star left"></div>
+    <div class="star right"></div>
+    <img src="fto.png" alt="Evi Mariska">
+  </div>
+<!--Home-->
+  <div class="text" id="home">
+    <h1>Hello, I’m</h1>
+    <h2>Evi Mariska</h2>
+    <p>Usually called Evi. I’m a simple person, like aesthetic things, and enjoy exploring creative things. Nice to meet you!</p>
+    <a href="#about" class="button">Get Started <span>&#10132;</span></a>
+  </div>
+<!--About-->
+<div class="about-section" id="about">
+  <div class="about-text">
+    <h2>About Me</h2>
+    <p>Hi! My name is Evi. I’m a Web Developer who loves creating clean, functional, and user friendly websites. I have a big interest in both design and coding.</p>
+
+    <h3>Experience</h3>
+    <p>I have worked on a few simple projects like landing pages and portfolio websites. I used HTML, CSS, and JavaScript. Through these projects, I learned the basics of web development and how to create clean, responsive design.</p>
+
+    <h3>Profession</h3>
+    <p>Right now, I work as a freelance Web Developer.</p>
+
+    <button class="cv-btn">Download CV</button>
+  </div>
+  <div class="about-image">
+    <img src="fto.png" alt="Evi Mariska">
+  </div>
+</div>
+<!--Portofolio-->
+<body>
+  <section class="projects-section" id="portfolio">
+    <h2>
+      <span>PORTFOLIO</span>
+      MY PROJECTS
+    </h2>
+
+    <div class="slider-wrapper">
+      <button id="prevBtn" class="nav-btn">‹</button>
+      <div id="projectSlider" class="project-gallery">
+        <a href="https://aurraauuu.github.io/evi-travel/" target="_blank">
+          <img src="Screenshot tugas1.png" alt="Project 1">
+        </a>
+        <a href="https://aurraauuu.github.io/evi-store/" target="_blank">
+          <img src="Screenshot tugas2.png" alt="Project 2">
+        </a>
+        <a href="https://aurraauuu.github.io/evi-rumasakit/" target="_indexx.html">
+          <img src="Screenshot tugas3.png" alt="Project 3">
+        </a>
+        <a href="https://aurraauuu.github.io/evi-konser/" target="_blank">
+          <img src="Screenshot tugas4.png" alt="Project 4">
+        </a>
+        <a href="https://aurraauuu.github.io/ana-history/" target="_blank">
+          <img src="Screenshot kolaborasi.jpeg" alt="Project 5">
+        </a>
+        <a href="file:///C:/Users/asus/OneDrive/Documents/tugas5/latihan%201.html" target="_blank">
+          <img src="Screenshot tugas5.png" alt="Project 6">
+        </a>
+      </div>
+      <button id="nextBtn" class="nav-btn">›</button>
+    </div>
+  </section>
+
+  <script>
+    const slider = document.getElementById('projectSlider');
+    const nextBtn = document.getElementById('nextBtn');
+    const prevBtn = document.getElementById('prevBtn');
+    const scrollStep = 420;
+
+    nextBtn.addEventListener('click', () => {
+      slider.scrollBy({ left: scrollStep, behavior: 'smooth' });
+    });
+
+    prevBtn.addEventListener('click', () => {
+      slider.scrollBy({ left: -scrollStep, behavior: 'smooth' });
+    });
+  </script>
+  </div>
+  </body>
+<!--Contact-->
+<body>
+
+ <div class="container" id ="contact">
+    <h1>Get In Touch</h1>
+    <p>Whether you have a project in mind, want to collaborate, or just want to say hi, I'd love to hear from you.<br>
+    Let's create something meaningful together.</p>
+    
+    <div class="contact-info">
+      <div class="contact-item"><i class="fas fa-envelope"></i> evimariskae@gmail.com</div>
+      <div class="contact-item"><i class="fas fa-link"></i> @iveymaries</div>
+      <div class="contact-item"><i class="fas fa-phone"></i> 0882-0036-02262</div>
+      <div class="contact-item"><i class="fab fa-facebook"></i> facebook.com/iveymaries</div>
+      <div class="contact-item"><i class="fab fa-instagram"></i> instagram.com/iveymaries</div>
+      <div class="contact-item"><i class="fab fa-whatsapp"></i> wa.me/62882003602262</div>
+    </div>
+  </div>
+
+  <script>
+    // Animation handled with CSS; additional effects on hover can be added if needed
+    const items = document.querySelectorAll('.contact-item');
+    items.forEach(item => {
+      item.addEventListener('mouseenter', () => {
+        item.style.color = '#222';
+      });
+      item.addEventListener('mouseleave', () => {
+        item.style.color = '#333';
+      });
+    });
+  
+    </script>
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const contact = document.querySelector('.contact');
+        contact.style.opacity = 0;
+        contact.style.transform = 'translateY(30px)';
+
+        setTimeout(() => {
+            contact.style.transition = 'all 1s ease';
+            contact.style.opacity = 1;
+            contact.style.transform = 'translateY(0)';
+        }, 300);
+    });
+
+    // Leaf fall effect
+    const leafEmoji = '🍂';
+    const totalLeaves = 20;
+
+    for (let i = 0; i < totalLeaves; i++) {
+      const leaf = document.createElement('div');
+      leaf.classList.add('leaf');
+      leaf.innerText = leafEmoji;
+      leaf.style.left = Math.random() * 100 + 'vw';
+      leaf.style.animationDuration = 4 + Math.random() * 6 + 's';
+      leaf.style.fontSize = (20 + Math.random() * 20) + 'px';
+      document.body.appendChild(leaf);
+    }
+  </script>
+  </div>
+  </body>
+
+<!--Footer-->
+  <title>Footer Section</title>
+  <link rel="stylesheet" href="footer.css" />
+</head>
+<body>
+  <footer class="footer-container">
+    <div class="footer-column">
+      <h2>Let's Connect</h2>
+      <p>Got a project or<br>just wanna talk?</p>
+    </div>
+
+    <div class="footer-column">
+      <h2>Navigation</h2>
+      <ul class="vertical-nav">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Portfolio</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h2>Contact us</h2>
+      <p><strong>Call:</strong><br> +62 882 0036 02262</p>
+      <p><strong>Email:</strong><br> unser@iveymaries.gmail.com</p>
+    </div>
+  </footer>
+</body>
+</body>
+
+
+</body>
+</html>
+
+</div>
+</body>
+</html>
